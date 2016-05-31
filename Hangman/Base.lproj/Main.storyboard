@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="word: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeY-Z3-lcb">
+                                <rect key="frame" x="20" y="43" width="560" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DfI-UA-Aq5">
+                                <rect key="frame" x="234" y="174" width="132" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ag5-2p-ecm"/>
+                                    <constraint firstAttribute="width" constant="132" id="t68-LE-eI7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpM-tD-kve">
+                                <rect key="frame" x="277" y="220" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="91b-oy-Sid"/>
+                                    <constraint firstAttribute="height" constant="30" id="nBl-hf-sIJ"/>
+                                </constraints>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="guessButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SS8-Q7-EOd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yeY-Z3-lcb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8Ck-m0-78w"/>
+                            <constraint firstItem="yeY-Z3-lcb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="9NK-dP-bRF"/>
+                            <constraint firstItem="yeY-Z3-lcb" firstAttribute="centerX" secondItem="DfI-UA-Aq5" secondAttribute="centerX" id="AmY-kg-v2o"/>
+                            <constraint firstItem="jpM-tD-kve" firstAttribute="top" secondItem="DfI-UA-Aq5" secondAttribute="bottom" constant="16" id="XYS-IQ-YmK"/>
+                            <constraint firstItem="yeY-Z3-lcb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eJj-EO-4aK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jpM-tD-kve" secondAttribute="bottom" constant="350" id="k2T-hF-fFe"/>
+                            <constraint firstItem="DfI-UA-Aq5" firstAttribute="top" secondItem="yeY-Z3-lcb" secondAttribute="bottom" constant="87" id="vsi-Ku-Bbp"/>
+                            <constraint firstItem="DfI-UA-Aq5" firstAttribute="centerX" secondItem="jpM-tD-kve" secondAttribute="centerX" id="zFC-VJ-aGq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="yeY-Z3-lcb" id="lP4-rQ-PAv"/>
+                        <outlet property="letterGuessTextField" destination="DfI-UA-Aq5" id="sMt-lR-D4F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439" y="283"/>
+        </scene>
+    </scenes>
+</document>
